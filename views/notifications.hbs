@@ -1,0 +1,135 @@
+<main>
+    {{#if data.user}}
+        {{> projectModal}}
+    {{/if}}
+	
+	<style>
+	body{
+  background-color: #fcfcfc;
+}
+
+.row{
+  margin:auto;
+  padding: 30px;
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  .card{
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+    transition: opacity 0.3s;
+  }
+}
+
+
+.card-body{
+  padding: 0.5rem;
+  table{
+    width: 100%;
+    tr{
+      display:flex;
+      td{
+        a.btn{
+          font-size: 0.8rem;
+          padding: 3px;
+        }
+      }
+      td:nth-child(2){
+        text-align:right;
+        justify-content: space-around;
+      }
+    }
+  }
+  
+}
+
+.card-title:before{
+  display:inline-block;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight:900;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+
+.notification-invitation {
+  .card-body {
+    .card-title:before {
+      color: #90CAF9;
+      border-color: #90CAF9;
+      content: "\f007";
+    }
+  }
+}
+
+.notification-warning {
+  .card-body {
+    .card-title:before {
+      color: #FFE082;
+      border-color: #FFE082;
+      content: "\f071";
+    }
+  }
+}
+
+.notification-danger {
+  .card-body {
+    .card-title:before {
+      color: #FFAB91;
+      border-color: #FFAB91;
+      content: "\f00d";
+    }
+  }
+}
+
+.notification-reminder {
+  .card-body {
+    .card-title:before {
+      color: #CE93D8;
+      border-color: #CE93D8;
+      content: "\f017";
+    }
+  }
+}
+
+.card.display-none{
+  display: none;
+  transition: opacity 2s;
+}
+
+
+	</style>
+	
+    <div class="container-fluid mt-4">
+        
+		<div class="row notification-container">
+		  <h2 class="text-center">Ваши уведомления</h2>
+		  <div class="container mt-4">
+		  <p class="dismiss text-right"><a id="dismiss-all" href="#">Очистить все</a></p>
+		  <div class="card notification-card">
+			<div class="card-body">
+			  <table class="container-fluid">
+				<tr>
+				  <td><div class="card-title container-fluid" id="notificationText"><img src="https://bootdey.com/img/Content/avatar/avatar7.png"
+						alt="avatar 3" style="width: 40px; height: 100%;">$notificationText</div></td>
+				  <td><div class="container-fluid d-flex flex-row-reverse">
+					<a href="#" class="btn btn-primary">Перейти</a>
+					<a href="#" class="btn btn-danger dismiss-notification">Очистить</a>
+					</div>
+				  </td>
+				</tr>
+			  </table>
+			</div>
+		  </div>
+		  </div>
+		  
+		</div>
+  
+    </div>
+</main>

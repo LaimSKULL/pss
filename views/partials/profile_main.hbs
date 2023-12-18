@@ -1,0 +1,79 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <h6 class="mb-0">Фамилия</h6>
+            </div>
+            <div class="col-sm-9 text-secondary d-flex align-items-center">
+                <span id="lastName">{{data_profile.user.Profile.lastName}}</span>
+                <i id="editLastName" class="fas fa-pencil-alt text-primary  cursor-pointer ml-auto"></i>
+                <i id="saveLastName" class="fas fa-check text-success cursor-pointer d-none ml-auto"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <h6 class="mb-0">Имя</h6>
+            </div>
+            <div class="col-sm-9 text-secondary d-flex align-items-center">
+                <span id="firstName">{{data_profile.user.Profile.firstName}}</span>
+                <i id="editFirstName"
+                   class="fas fa-pencil-alt text-primary ml-2 cursor-pointer ml-auto"></i>
+                <i id="saveFirstName"
+                   class="fas fa-check text-success ml-2 cursor-pointer d-none ml-auto"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <h6 class="mb-0">Отчество</h6>
+            </div>
+            <div class="col-sm-9 text-secondary d-flex align-items-center">
+                <span id="middleName">{{data_profile.user.Profile.middleName}}</span>
+                <i id="editMiddleName"
+                   class="fas fa-pencil-alt text-primary ml-2 cursor-pointer ml-auto"></i>
+                <i id="saveMiddleName"
+                   class="fas fa-check text-success ml-2 cursor-pointer d-none ml-auto"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <h6 class="mb-0">Email</h6>
+            </div>
+            <div class="col-sm-9 text-secondary d-flex align-items-center">
+                <span id="email">{{data_profile.user.email}}</span>
+                <i id="editEmail" class="fas fa-pencil-alt text-primary ml-2 cursor-pointer ml-auto"></i>
+                <i id="saveEmail" class="fas fa-check text-success ml-2 cursor-pointer d-none ml-auto"></i>
+            </div>
+            <div class="col-sm-9 offset-sm-3 text-secondary">
+                <small class="text-muted">При изменении email, при входе нужно использовать новый
+                    email.</small>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <h6 class="mb-0">Дата рождения</h6>
+            </div>
+            <div class="col-sm-9 text-secondary d-flex align-items-center">
+                <span id="dob">{{data_profile.user.Profile.dob }}</span>
+                <i id="editDob" class="fas fa-pencil-alt text-primary ml-2 cursor-pointer ml-auto"></i>
+                <i id="saveDob" class="fas fa-check text-success ml-2 cursor-pointer d-none ml-auto"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <h6 class="mb-0">Пароль</h6>
+            </div>
+            <div class="col-sm-9 text-secondary d-flex align-items-center">
+                <span id="password">********</span>
+                <i id="editPassword" class="fas fa-pencil-alt text-primary ml-2 cursor-pointer ml-auto"></i>
+                <i id="savePassword"
+                   class="fas fa-check text-success ml-2 cursor-pointer d-none ml-auto"></i>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<main>
+    {{#if data.user}}
+        {{> projectModal}}
+    {{/if}}
+    <div class="container mt-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Поиск..." aria-label="Поиск..." aria-describedby="button-search">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button" id="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+{{>card_project}}
+    </div>
+</main>

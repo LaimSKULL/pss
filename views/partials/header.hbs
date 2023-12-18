@@ -1,0 +1,62 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="/img/dev.svg" width="45" height="45" alt="logo">
+            PSS
+        </a>
+        {{#if data.user}}
+            <div id="Auth" class="ml-auto d-flex align-items-center position-relative">
+                <a class="mr-3"  data-toggle="modal" data-target="#createProjectModal">
+                    <i class="fa-regular fa-plus rounded-circle" style="font-size: 24px;">
+                    </i>
+                </a>
+                <a class="mr-3" href="/chat">
+                    <i class="fa-regular fa-comments rounded-circle" style="font-size: 24px; position: relative;">
+                        <span class="badge badge-danger position-absolute" style="top: -6px; right: -6px; font-size: 12px;">4</span>
+                    </i>
+                </a>
+                <a class="mr-3 position-relative" href="/notifications">
+                    <i class="fa-regular fa-bell rounded-circle" style="font-size: 24px; position: relative;">
+                        <span class="badge badge-danger position-absolute" id="notify-badge" style="top: -6px; right: -6px; font-size: 12px;">4</span>
+                    </i>
+                </a>
+                <a class="dropdown-toggle text-decoration-none text-reset" href="#" role="button" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" width="40" height="40" class="rounded-circle">
+                    <span class="navbar-text ml-2" id="a_name">{{data.user.Profile.firstName}}</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" id="id_p" href="/profile/{{data.user.Profile.id}}">Профиль</a>
+                    <a class="dropdown-item" href="/auth/logOut">Выйти</a>
+                </div>
+            </div>
+            <script src="/js/token.js"></script>
+        {{else}}
+            <div id="noAuth" class="ml-auto mr-2 d-lg-flex">
+                <div class="btn-group" role="group">
+                    <a type="button" class="btn btn-primary bt" href="/auth">Войти</a>
+                    <a type="button" class="btn btn-danger" href="/register">Зарегистрироваться</a>
+                </div>
+            </div>
+        {{/if}}
+    </nav>
+</header>
+<style>
+    /* CSS-анимация для анимации прелистывания вверх */
+    @keyframes slideInFromTop {
+        0% {
+            transform: translateY(-100%); /* Начальное положение: сдвиг вверх за пределы экрана */
+            opacity: 0; /* Начальная прозрачность: элемент невидим */
+        }
+        100% {
+            transform: translateY(0); /* Конечное положение: возвращение к начальной позиции */
+            opacity: 1; /* Конечная прозрачность: элемент видим */
+        }
+    }
+
+    /* Применение анимации к элементу уведомлений */
+    .animate-slide-up {
+        animation-name: slideInFromTop; /* Название вашей анимации */
+        animation-duration: 0.5s; /* Длительность анимации */
+    }
+
+</style>

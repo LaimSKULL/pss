@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title_text %></title>
+    <%- include('link.ejs') %>
+    <link rel="stylesheet" href="../../public/css/card.css">
+</head>
+<%- include('header.ejs') %>
+<body>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Список проектов</h2>
+    <div class="row">
+        <%- include('template_card_project.ejs') %>
+    </div>
+</div>
+
+</body>
+<%- include('script.ejs') %>
+<%- include('footer.ejs') %>
+</html>

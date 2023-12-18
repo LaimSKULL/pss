@@ -1,0 +1,154 @@
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background-color: #f6f8fa;
+    }
+
+    .card {
+        border: 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        background-color: #f6f8fa;
+        border-bottom: 1px solid #e1e4e8;
+        font-weight: bold;
+        padding: 8px 16px;
+    }
+
+    .btn-primary {
+        background-color: #0366d6;
+        border-color: #0366d6;
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0356c5;
+        border-color: #0356c5;
+    }
+
+    .btn-info {
+        background-color: #2ea44f;
+        border-color: #2ea44f;
+        color: #fff;
+    }
+
+    .btn-info:hover {
+        background-color: #2b9e46;
+        border-color: #2b9e46;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .task-block h2,
+    .comments-block h2,
+    .documents-block h2,
+    .created-date h2 {
+        margin-top: 0;
+        font-size: 1.2em;
+        color: #0366d6;
+    }
+
+    .task,
+    .comment,
+    .document {
+        border-bottom: 1px solid #e1e4e8;
+        padding: 10px 0;
+    }
+
+    .task p,
+    .comment p,
+    .document p {
+        margin-bottom: 0;
+    }
+
+    .task:last-child,
+    .comment:last-child,
+    .document:last-child {
+        border-bottom: none;
+    }
+</style>
+
+<main class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Большой текст о проекте -->
+            <section class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title">Название проекта</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Длинный текст о вашем проекте здесь. Вы можете написать все, что считаете важным и нужным для описания вашего проекта.
+                    </p>
+                    <!-- Дополнительные пункты и описание проекта -->
+                    <p>
+                        Еще больше информации о проекте...
+                    </p>
+                </div>
+            </section>
+            <section class="card mb-8">
+                <div class="card-header">
+                    <h2 class="card-title">Задачи</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Каждая задача -->
+                    <div class="task mb-3">
+                        <h3>Задача 1 <button class="btn btn-link">Редактировать</button></h3>
+                        <ul class="list-group">
+                            <!-- Подзадачи -->
+                            <li class="list-group-item">Подзадача 1</li>
+                            <li class="list-group-item">Подзадача 2</li>
+                            <!-- ... -->
+                        </ul>
+                        <button class="btn btn-primary btn-sm mt-2">Добавить подзадачу</button>
+                    </div>
+                    <!-- Другие задачи -->
+                    <div class="task mb-3">
+                        <!-- ... -->
+                    </div>
+                    <!-- ... -->
+                </div>
+            </section>
+        </div>
+        <div class="col-md-4">
+            <!-- Задачи с подзадачами -->
+
+            <!-- Список участников -->
+            <section class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title">Список участников</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <!-- Список участников -->
+                        <li class="list-group-item">Участник 1 <button class="btn btn-sm btn-danger float-end">Удалить</button></li>
+                        <li class="list-group-item">Участник 2 <button class="btn btn-sm btn-danger float-end">Удалить</button></li>
+                        <!-- ... -->
+                    </ul>
+                    <button class="btn btn-primary btn-sm mt-3">Добавить участника</button>
+                </div>
+            </section>
+            <!-- Список прикрепленных файлов -->
+            <section class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title">Список прикрепленных файлов</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <!-- Список файлов -->
+                        <li class="list-group-item">Файл 1 <button class="btn btn-sm btn-danger float-end">Удалить</button></li>
+                        <li class="list-group-item">Файл 2 <button class="btn btn-sm btn-danger float-end">Удалить</button></li>
+                        <!-- ... -->
+                    </ul>
+                    <button class="btn btn-primary btn-sm mt-3">Прикрепить файл</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>

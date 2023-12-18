@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    {{> link}}
+    <!-- Подключение Bootstrap или других стилей -->
+    <!-- Ссылка на стили Bootstrap или других библиотек стилей -->
+</head>
+<body>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <h2 class="text-center mb-4">Регистрация</h2>
+                    <p class="text-center"></p>
+                    <div class="card mb-5">
+                        <div id="authA" class="card-body text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="blue" class="bi bi-person-circle mb-3" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                            <form class="text-center" method="post">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="firstName" placeholder="Имя">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="lastName" placeholder="Фамилия">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="middleName" placeholder="Отчество">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="email" name="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="password" name="password" placeholder="Пароль">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block" onclick="sendRegistrationData()" type="button">Зарегистрироваться</button>
+                                </div>
+                                <a href="/auth" class="text-muted d-block mb-2">Уже есть аккаунт? Войти</a>
+                                <!-- Добавьте здесь другие ссылки или элементы, если нужно -->
+                            </form>
+                            <!-- Конец формы для регистрации -->
+                        </div>
+                        <div id="authF" class="card-body d-none text-center">
+                            <!-- Здесь можно добавить содержимое для регистрации после успешной регистрации -->
+                            <!-- Например: -->
+                            <input class="form-control-plaintext" type="text" value="Регистрация прошла успешно!" readonly style="text-align: center;">
+                            <!-- Конец содержимого для регистрации после успешной регистрации -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{{> script}}
+<script src="/js/reg.js"></script>
+{{> footer}}
+</body>
+<html>
